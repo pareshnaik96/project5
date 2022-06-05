@@ -6,7 +6,7 @@ const app = express();
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+
 
 const multer= require("multer");
 app.use( multer().any())
