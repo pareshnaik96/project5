@@ -1,6 +1,4 @@
 # project5
-
-# project5
 #Uranium
 ## Project - Products Management
 
