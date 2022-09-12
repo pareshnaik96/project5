@@ -16,7 +16,6 @@ const userSchema = mongoose.Schema(
         fname: {
             type: String,
             required: [true, "fname is required"],
-            unique: true,
             trim: true
         },
         lname: {

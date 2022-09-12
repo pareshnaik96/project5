@@ -74,14 +74,10 @@ const createUser = async function (req, res) {
 
       //-----------------------------------------------validation start from here------------------------------------------------//
 
-      //----------validation for fname  & unique name---------------
+      //----------validation for fname ---------------
 
       if (!isValid(fname)) {
             return res.status(400).send({ status: false, message: "fname is required" });
-      }
-      let uniqueFname = await userModel.findOne({ fname });
-      if (uniqueFname){
-            return res.status(400).send({ status: false, message: "first name already exist" });
       }
 
       //-----------validation for lname-----------------
