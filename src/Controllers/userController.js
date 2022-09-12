@@ -177,6 +177,7 @@ const createUser = async function (req, res) {
       } 
       else
         return res.status(400).send({ status: false, message: "billing field is not given" });
+        
       //----------validation for profileImage---------------
 
       if (!(req.files && req.files.length)) {

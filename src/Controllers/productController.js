@@ -257,7 +257,7 @@ const getProductById = async function (req, res) {
 
       let findProduct = await productModel.findOne({ _id: productId, isDeleted: false })
 
-      if (!findProduct) return res.status(400).send({ status: false, message: "Product Not Found" })
+      if (!findProduct) return res.status(404).send({ status: false, message: "Product Not Found" })
 
       return res.status(200).send({ status: true, message: "Product details", data: findProduct })
 
@@ -408,4 +408,4 @@ const deleteProduct = async function (req, res) {
 
 
 
-module.exports = { createProduct, getProductByQuery, deleteProduct, getProductById, updateProductById }
+module.exports = { createProduct, getProductByQuery, getProductById, updateProductById ,deleteProduct}
